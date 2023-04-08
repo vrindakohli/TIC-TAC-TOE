@@ -1,0 +1,117 @@
+/* class names will be preceeded by a dot
+id names will be preceeded by hashtag */
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto+Mono:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+:root{
+    --winning-blocks:rgb(226, 181, 155);
+    background-color: bisque;
+
+}
+
+body{
+    color: brown;
+}
+.container{
+    padding: 40px;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: bisque;
+}
+#playerText{
+    /* text-decoration-line: underline; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+#playerWon{
+    color: saddlebrown;
+    margin-top: 25px;
+    font-family: 'Alkatra', cursive;
+}
+
+/* used 2 approches. I have commented the second approach */
+/* approach one: use width of each box and width of entire game board loagic. where width og gameboard = 3 * width of each box */
+/* approach two: use css grid property. */
+#gameBoard{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 480px;
+    height: 330px;
+    background-color: aliceblue;
+    /* display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw); */
+}
+
+.board{
+    height: 110px;
+    display: flex;
+  
+   /* display: flex; */
+    border: 2px solid;
+    align-items: center;
+    justify-content: center;
+    color: brown;
+    font-size: 100px;
+    /* border-right: 2px solid; */
+    font-size: 90px;
+    width: 160px;
+    /* font-family: 'Alkatra', cursive; */
+
+}
+
+/* .won{
+    display: flex;
+} */
+
+.board:hover{
+    background-color: rgb(233, 206, 206);
+    cursor: pointer;
+
+}
+
+button{
+    padding: 10px 20px;
+    margin-left: 20px;
+    display: flex;
+    background-color: brown;
+    color: aliceblue;
+    border: 2px solid brown;
+    border-radius: 5px;
+
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(174, 89, 89);
+}
+
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.winMessage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.winMessage img{
+    width: 0px;
+    height: 0px;
+    transition: width 1s ease-in-out;
+}
